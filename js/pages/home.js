@@ -12,12 +12,10 @@ function renderHome() {
       <div class="hero-overlay"></div>
       <div class="container">
         <div class="hero-content">
-          <span class="section-subtitle" style="color: var(--color-gold-light);">Welcome to Mathy Bakery</span>
-          <h1>Baked with Love, Crafted with Passion</h1>
-          <p>Discover our handcrafted selection of cakes, pastries, and desserts — made fresh daily with the finest ingredients.</p>
+          <h1>Freshly Baked. Locally Loved.</h1>
+          <p>One of the most loved bakeries in Marthandam, known for fresh bakes and crowd-favourite treats.</p>
           <div class="hero-actions">
-            <a href="#/shop" class="btn btn-primary btn-lg">Order Now</a>
-            <a href="#/about" class="btn btn-outline btn-lg" style="border-color: var(--color-cream); color: var(--color-cream);">Our Story</a>
+            <a href="#/shop" class="btn btn-primary btn-lg" style="padding: 20px 48px; font-size: 1.15rem;">Order Now</a>
           </div>
         </div>
       </div>

@@ -57,7 +57,7 @@ function renderContact() {
               </div>
               <div>
                 <h4>Visit Us</h4>
-                <p>123 Baker Street, Indiranagar<br>Bangalore, Karnataka 560038</p>
+                <p><a href="https://maps.app.goo.gl/Ev9N9cRGUV9x5X6P7" target="_blank" style="color: inherit;">864F+6FJ, Marthandam<br>Tamil Nadu 629165</a></p>
               </div>
             </div>
 
@@ -69,7 +69,7 @@ function renderContact() {
               </div>
               <div>
                 <h4>Call Us</h4>
-                <p>+91 98765 43210<br>+91 80 4567 8901</p>
+                <p>+91 95005 58271</p>
               </div>
             </div>
 
@@ -102,7 +102,7 @@ function renderContact() {
             <!-- Map -->
             <div class="map-container" style="margin-top: var(--space-xl);">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0158!2d77.6408!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzE3LjgiTiA3N8KwMzgnMjcuMCJF!5e0!3m2!1sen!2sin!4v1234567890" 
+                src="https://maps.google.com/maps?q=864F%2B6FJ,+Marthandam,+Tamil+Nadu+629165&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
                 style="border:0; border-radius: var(--radius-md);" 
