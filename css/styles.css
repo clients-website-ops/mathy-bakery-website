@@ -1670,7 +1670,13 @@ p {
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 64px;
+    --header-height: 80px;
+  }
+
+  .header {
+    padding-top: env(safe-area-inset-top, 0px);
+    height: auto;
+    min-height: var(--header-height);
   }
 
   .nav-links {
