@@ -5,17 +5,37 @@
 function renderHome() {
   return `
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-bg">
-        <img src="assets/images/hero-banner.png" alt="Mathy Bakery — Freshly baked artisan goods">
+    <section class="hero" id="hero-slider">
+      <!-- Slide 1 -->
+      <div class="hero-slide active">
+        <div class="hero-bg">
+          <img src="assets/Section 2.webp" alt="A World of Sweet Choices">
+        </div>
+        <div class="hero-overlay" style="background: linear-gradient(135deg, rgba(30, 20, 15, 0.85) 0%, rgba(30, 20, 15, 0.6) 50%, rgba(30, 20, 15, 0.4) 100%);"></div>
+        <div class="container" style="width: 100%;">
+          <div class="hero-content">
+            <h1>A World of Sweet Choices</h1>
+            <p>Explore a wide selection of treats, crafted to satisfy every craving and every occasion.</p>
+            <div class="hero-actions">
+              <a href="#/shop" class="btn btn-primary btn-lg" style="padding: 20px 48px; font-size: 1.15rem;">Order Now</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="hero-overlay"></div>
-      <div class="container">
-        <div class="hero-content">
-          <h1>Freshly Baked. Locally Loved.</h1>
-          <p>One of the most loved bakeries in Marthandam, known for fresh bakes and crowd-favourite treats.</p>
-          <div class="hero-actions">
-            <a href="#/shop" class="btn btn-primary btn-lg" style="padding: 20px 48px; font-size: 1.15rem;">Order Now</a>
+      
+      <!-- Slide 2 -->
+      <div class="hero-slide">
+        <div class="hero-bg">
+          <img src="assets/Section 1.jpg" alt="Rich. Decadent. Irresistible.">
+        </div>
+        <div class="hero-overlay" style="background: linear-gradient(135deg, rgba(30, 20, 15, 0.85) 0%, rgba(30, 20, 15, 0.6) 50%, rgba(30, 20, 15, 0.4) 100%);"></div>
+        <div class="container" style="width: 100%;">
+          <div class="hero-content">
+            <h1>Rich. Decadent. Irresistible.</h1>
+            <p>Indulge in our signature chocolate creations, crafted for those who love deep, rich flavours in every bite.</p>
+            <div class="hero-actions">
+              <a href="#/shop" class="btn btn-primary btn-lg" style="padding: 20px 48px; font-size: 1.15rem;">Order Now</a>
+            </div>
           </div>
         </div>
       </div>
@@ -64,7 +84,7 @@ function renderHome() {
     <section class="section" style="background: var(--color-white);">
       <div class="container">
         <div class="section-header">
-          <span class="section-subtitle">Why Choose Us</span>
+          <span class="section-subtitle">WHY CUSTOMERS CHOOSE MATHY'S</span>
           <h2>The Mathy Difference</h2>
         </div>
         <div class="highlights-grid">
@@ -76,8 +96,8 @@ function renderHome() {
                 <path d="M17 8l-7 7"/>
               </svg>
             </div>
-            <h4>Fresh Ingredients</h4>
-            <p>We source only the finest, locally-sourced ingredients. No preservatives, no shortcuts — just pure, honest baking.</p>
+            <h4>Made Fresh, Served Daily</h4>
+            <p>Our products are prepared fresh and served throughout the day, ensuring taste and quality our customers rely on.</p>
           </div>
           <div class="highlight-card">
             <div class="highlight-icon">
@@ -88,8 +108,8 @@ function renderHome() {
                 <circle cx="18.5" cy="18.5" r="2.5"/>
               </svg>
             </div>
-            <h4>Same-Day Delivery</h4>
-            <p>Order before 2 PM and enjoy your treats the very same day. Fast, careful delivery right to your doorstep.</p>
+            <h4>Same-Day Orders Available</h4>
+            <p>Select items are available for same-day orders. Place your order early to enjoy your favourites without the wait.</p>
           </div>
           <div class="highlight-card">
             <div class="highlight-icon">
@@ -97,8 +117,8 @@ function renderHome() {
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
               </svg>
             </div>
-            <h4>Artisan Quality</h4>
-            <p>Every product is handcrafted by our master bakers with decades of experience. Quality you can taste in every bite.</p>
+            <h4>Consistent Taste & Quality</h4>
+            <p>Known for reliable taste and quality, our products are crafted with care and enjoyed by customers every day.</p>
           </div>
         </div>
       </div>
@@ -141,4 +161,19 @@ function renderProductCard(product) {
       </div>
     </div>
   `;
+}
+
+let homeSliderInterval;
+function initHome() {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (!slides.length) return;
+  
+  let currentSlide = 0;
+  if (homeSliderInterval) clearInterval(homeSliderInterval);
+  
+  homeSliderInterval = setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }, 5000); // Change slide every 5 seconds
 }

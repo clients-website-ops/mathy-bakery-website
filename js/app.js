@@ -26,6 +26,7 @@ function router() {
   if (path === '/' || path === '') {
     content = renderHome();
     updateActiveNav('/');
+    setTimeout(() => { if (typeof initHome === 'function') initHome(); }, 0);
   } else if (path === '/shop') {
     content = renderShop();
     updateActiveNav('/shop');

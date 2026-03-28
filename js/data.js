@@ -195,10 +195,10 @@ const PRODUCTS = [
 ];
 
 const CATEGORIES = [
-  { name: 'Cakes', image: 'assets/images/chocolate-cake.png', count: PRODUCTS.filter(p => p.category === 'Cakes').length },
-  { name: 'Pastries', image: 'assets/images/croissants.png', count: PRODUCTS.filter(p => p.category === 'Pastries').length },
-  { name: 'Desserts', image: 'assets/images/brownies.png', count: PRODUCTS.filter(p => p.category === 'Desserts').length },
-  { name: 'Custom Cakes', image: 'assets/images/chocolate-cake.png', count: PRODUCTS.filter(p => p.category === 'Custom Cakes').length }
+  { name: 'Cakes', image: 'assets/1c.webp?v=15', count: PRODUCTS.filter(p => p.category === 'Cakes').length },
+  { name: 'Pastries', image: 'assets/2c.jpg?v=15', count: PRODUCTS.filter(p => p.category === 'Pastries').length },
+  { name: 'Desserts', image: 'assets/3c.webp?v=15', count: PRODUCTS.filter(p => p.category === 'Desserts').length },
+  { name: 'Custom Cakes', image: 'assets/4c.jpg?v=15', count: PRODUCTS.filter(p => p.category === 'Custom Cakes').length }
 ];
 
 function getProductById(id) {
