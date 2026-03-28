@@ -137,7 +137,7 @@ const PRODUCTS = [
     price: 1499,
     originalPrice: null,
     description: 'Design your dream cake! Choose from our premium flavors, fillings, and decorations. Our pastry artists will bring your vision to life. Perfect for birthdays, weddings, and special milestones.',
-    image: 'assets/images/chocolate-cake.png',
+    image: 'assets/5c.avif',
     sizes: [
       { label: '1 kg', price: 1499 },
       { label: '2 kg', price: 2799 },
