@@ -536,6 +536,7 @@ p {
   visibility: hidden;
   transition: opacity 0.8s ease-in-out, visibility 0.8s;
   z-index: 0;
+  pointer-events: none;
 }
 
 .hero-slide.active {
@@ -1693,13 +1694,17 @@ p {
     flex-direction: column;
     padding: var(--space-xl);
     gap: var(--space-lg);
-    transform: translateY(-120%);
-    transition: transform var(--transition-base);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
     box-shadow: var(--shadow-lg);
   }
 
   .nav-links.active {
     transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .hamburger {
