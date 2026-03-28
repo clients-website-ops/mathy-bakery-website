@@ -179,6 +179,7 @@ p {
   left: 0;
   right: 0;
   height: var(--header-height);
+  padding-top: env(safe-area-inset-top, 0px);
   background: var(--color-cream);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -522,7 +523,7 @@ p {
   display: flex;
   align-items: center;
   overflow: hidden;
-  margin-top: var(--header-height);
+  margin-top: calc(var(--header-height) + env(safe-area-inset-top, 0px) + 12px);
   padding-top: var(--space-xl);
 }
 
@@ -532,13 +533,15 @@ p {
   display: flex;
   align-items: center;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  visibility: hidden;
+  transition: opacity 0.8s ease-in-out, visibility 0.8s;
   z-index: 0;
 }
 
 .hero-slide.active {
   opacity: 1;
-  z-index: 1;
+  visibility: visible;
+  z-index: 2;
 }
 
 .hero-bg {
@@ -1675,15 +1678,14 @@ p {
   }
 
   .header {
-    padding-top: env(safe-area-inset-top, 0px);
-    height: auto;
-    min-height: var(--header-height);
+    height: calc(var(--header-height) + env(safe-area-inset-top, 0px) + 12px);
+    padding-top: calc(env(safe-area-inset-top, 0px) + 12px);
     background: var(--color-cream) !important;
   }
 
   .nav-links {
     position: fixed;
-    top: var(--header-height);
+    top: calc(var(--header-height) + env(safe-area-inset-top, 0px) + 12px);
     left: 0;
     right: 0;
     background: rgba(255, 248, 240, 0.98);
