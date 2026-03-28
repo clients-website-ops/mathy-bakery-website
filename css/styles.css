@@ -1670,11 +1670,11 @@ p {
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 80px;
+    --header-height: 88px;
   }
 
   .header {
-    padding-top: env(safe-area-inset-top, 0px);
+    padding-top: calc(env(safe-area-inset-top, 0px) + 8px);
     height: auto;
     min-height: var(--header-height);
   }
